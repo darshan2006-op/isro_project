@@ -1,0 +1,221 @@
+{
+    "Product_Observational": {
+        "@{http://www.w3.org/2001/XMLSchema-instance}schemaLocation": "http://pds.nasa.gov/pds4/pds/v1 http://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1B00.xsd                  http://pds.nasa.gov/pds4/disp/v1 http://pds.nasa.gov/pds4/disp/v1/PDS4_DISP_1301.xsd                 http://pds.nasa.gov/pds4/sp/v1 http://pds.nasa.gov/pds4/sp/v1/PDS4_SP_1100.xsd           https://isda.issdc.gov.in/pds4/isda/v1 https://isda.issdc.gov.in/pds4/isda/v1/ch2_ldd_ISDA_1000.xsd",
+        "Identification_Area": {
+            "logical_identifier": "urn:isro:isda:ch2_cho.ohr:data_calibrated:ch2_ohr_ncp_20240930t2025441752_d_img_d18",
+            "version_id": "1.0",
+            "title": "Chandrayaan-2 Orbiter OHRC Experiment",
+            "information_model_version": "1.11.0.0",
+            "product_class": "Product_Observational",
+            "Modification_History": {
+                "Modification_Detail": {
+                    "modification_date": "2017-12-22",
+                    "version_id": "1.0",
+                    "description": "PDS4 product label created by SAC Optical DP Team"
+                }
+            }
+        },
+        "Observation_Area": {
+            "Time_Coordinates": {
+                "start_date_time": "2024-09-30T20:25:44.1752Z",
+                "stop_date_time": "2024-09-30T20:26:00.5587Z"
+            },
+            "Primary_Result_Summary": {
+                "purpose": "Science",
+                "processing_level": "Calibrated",
+                "description": "Calibrated Processing Level describes the radiometric correction (look up table) applied to the raw data"
+            },
+            "Investigation_Area": {
+                "name": "Chandrayaan-2",
+                "type": "Mission",
+                "Internal_Reference": {
+                    "lidvid_reference": "urn:isro:isda:context:investigation:mission.chandrayaan2::1.0",
+                    "reference_type": "data_to_investigation"
+                }
+            },
+            "Observing_System": {
+                "Observing_System_Component": [
+                    {
+                        "name": "Chandrayaan 2 Orbiter",
+                        "type": "Spacecraft",
+                        "description": "Chandrayaan-2 Orbiter is an Orbiter craft under the Chandrayaan-2 Spacecraft \n                    consists of various scientific instruments."
+                    },
+                    {
+                        "name": "orbiter high resolution camera",
+                        "type": "Instrument",
+                        "description": "OHRC (Orbiter High Resolution Camera) is one of the scientific instrument hosted \n                    on the Chandrayaan-2 Orbiter. The instrument is a a passive electro-optical \n                    imaging camera operating in visible-panchromatic band (500-800nm). \n                    OHRC images will be used to characterize the landing site \n                    (as its primary goal) with a ground sampling of 0.25m"
+                    }
+                ]
+            },
+            "Target_Identification": {
+                "name": "Moon",
+                "type": "Satellite",
+                "description": "Moon is a natural satellite of Earth"
+            },
+            "Mission_Area": {
+                "Product_Parameters": {
+                    "job_id": "OHRXXD18CHO2277002NNNN24275082238974_V1_0_00",
+                    "level0_dir_name": "OHRXXD18CHO2277002NNNN24275082238974_V1_0_00",
+                    "imaging_orbit_number": "22764",
+                    "dumping_orbit_number": "22770",
+                    "line_exposure_duration": {
+                        "@unit": "ms",
+                        "#text": "178.140"
+                    },
+                    "bits_selection": "msb",
+                    "tdi_stages": "TDI64",
+                    "detector_pixel_width": {
+                        "@unit": "micrometer",
+                        "#text": "5.2"
+                    },
+                    "focal_length": {
+                        "@unit": "mm",
+                        "#text": "2080"
+                    },
+                    "reference_data_used": "System",
+                    "orbit_limb_direction": "Ascending",
+                    "spacecraft_yaw_direction": "False",
+                    "spacecraft_altitude": {
+                        "@unit": "km",
+                        "#text": "101.67"
+                    },
+                    "pixel_resolution": {
+                        "@unit": "m/pixel",
+                        "#text": "0.26"
+                    },
+                    "roll": {
+                        "@unit": "deg",
+                        "#text": "16.624854"
+                    },
+                    "pitch": {
+                        "@unit": "deg",
+                        "#text": "9.307802"
+                    },
+                    "yaw": {
+                        "@unit": "deg",
+                        "#text": "0.385676"
+                    },
+                    "sun_azimuth": {
+                        "@unit": "deg",
+                        "#text": "153.986068"
+                    },
+                    "sun_elevation": {
+                        "@unit": "deg",
+                        "#text": "-0.493025"
+                    },
+                    "solar_incidence": {
+                        "@unit": "deg",
+                        "#text": "90.493025"
+                    },
+                    "projection": "Polar stereographic",
+                    "area": "South Pole"
+                },
+                "Geometry_Parameters": {
+                    "System_Level_Coordinates": {
+                        "upper_left_latitude": {
+                            "@unit": "deg",
+                            "#text": "-89.522339"
+                        },
+                        "upper_left_longitude": {
+                            "@unit": "deg",
+                            "#text": "167.294522"
+                        },
+                        "upper_right_latitude": {
+                            "@unit": "deg",
+                            "#text": "-89.425298"
+                        },
+                        "upper_right_longitude": {
+                            "@unit": "deg",
+                            "#text": "173.941191"
+                        },
+                        "lower_left_latitude": {
+                            "@unit": "deg",
+                            "#text": "-89.297030"
+                        },
+                        "lower_left_longitude": {
+                            "@unit": "deg",
+                            "#text": "254.716952"
+                        },
+                        "lower_right_latitude": {
+                            "@unit": "deg",
+                            "#text": "-89.221357"
+                        },
+                        "lower_right_longitude": {
+                            "@unit": "deg",
+                            "#text": "248.085957"
+                        }
+                    },
+                    "Refined_Corner_Coordinates": {
+                        "upper_left_latitude": {
+                            "@unit": "deg",
+                            "#text": "-89.522339"
+                        },
+                        "upper_left_longitude": {
+                            "@unit": "deg",
+                            "#text": "167.294522"
+                        },
+                        "upper_right_latitude": {
+                            "@unit": "deg",
+                            "#text": "-89.425298"
+                        },
+                        "upper_right_longitude": {
+                            "@unit": "deg",
+                            "#text": "173.941191"
+                        },
+                        "lower_left_latitude": {
+                            "@unit": "deg",
+                            "#text": "-89.297030"
+                        },
+                        "lower_left_longitude": {
+                            "@unit": "deg",
+                            "#text": "254.716952"
+                        },
+                        "lower_right_latitude": {
+                            "@unit": "deg",
+                            "#text": "-89.221357"
+                        },
+                        "lower_right_longitude": {
+                            "@unit": "deg",
+                            "#text": "248.085957"
+                        }
+                    }
+                }
+            }
+        },
+        "File_Area_Observational": {
+            "File": {
+                "file_name": "ch2_ohr_ncp_20240930T2025441752_d_img_d18.img",
+                "creation_date_time": "2025-06-23T16:37:22",
+                "file_size": {
+                    "@unit": "byte",
+                    "#text": "1103640000"
+                },
+                "md5_checksum": "218a282a236a3d9b5a0731c5f82e6231",
+                "comment": "This File contains the count calibrated image\n                md5_checksum is provided for ensuring data integrity when users are downloading the data."
+            },
+            "Array_2D_Image": {
+                "offset": {
+                    "@unit": "byte",
+                    "#text": "0"
+                },
+                "axes": "2",
+                "axis_index_order": "Last Index Fastest",
+                "Element_Array": {
+                    "data_type": "UnsignedByte"
+                },
+                "Axis_Array": [
+                    {
+                        "axis_name": "Line",
+                        "elements": "91970",
+                        "sequence_number": "1"
+                    },
+                    {
+                        "axis_name": "Sample",
+                        "elements": "12000",
+                        "sequence_number": "2"
+                    }
+                ]
+            }
+        }
+    }
+}
