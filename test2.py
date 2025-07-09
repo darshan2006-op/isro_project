@@ -10,23 +10,22 @@ from scipy.fft import fft2, ifft2
 # ------------------------
 
 # Input image path (OHRC .img)
-img_path = "C:/Users/darsh/Downloads/ch2_ohr_ncp_20240930T2025441752_d_img_d18/data/calibrated/20240930/input.img"
+img_path = "input.img"
 
 
-# Full image dimensions (from metadata/XML)
 full_width = 12000
-full_height = 91970
+full_height = 101074
 dtype = 'uint8'
 
 # OHRC metadata from XML
-pixel_resolution = 0.26  # meters per pixel
-sun_azimuth_deg = 153.986068
-sun_elevation_deg = 30.0  # degrees (must be > 0)
+pixel_resolution = 0.24  # meters per pixel
+sun_azimuth_deg = 272.835304
+sun_elevation_deg = 0.509328
 
 # Define a center crop window (you can change this)
 win_size = 2048
-col_off = 2048 *2
-row_off =2048 * 10
+col_off = 2048 * 2
+row_off =2048 * 2
 window = Window(col_off, row_off, win_size, win_size)
 
 print(f"🪟 Windowing image: offset=({row_off},{col_off}), size={win_size}x{win_size}")
