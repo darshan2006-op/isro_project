@@ -19,10 +19,6 @@ root = tree.getroot()
 ns = {'isda': 'https://isda.issdc.gov.in/pds4/isda/v1'}
 
 # OHRC metadata from XML
-# pixel_resolution = 0.24  # meters per pixel
-# sun_azimuth_deg = 272.835304
-# sun_elevation_deg = 0.509328
-
 sun_elevation_deg = float(root.find('.//isda:sun_elevation', ns).text)
 sun_azimuth_deg = float(root.find('.//isda:sun_azimuth', ns).text)
 pixel_resolution = float(root.find('.//isda:pixel_resolution', ns).text)
