@@ -4,6 +4,7 @@ from rasterio.windows import Window
 import matplotlib.pyplot as plt
 from scipy.ndimage import gaussian_filter
 from scipy.fft import fft2, ifft2
+import xml.etree.ElementTree as ET
 
 # ------------------------
 # CONFIGURATION
@@ -11,16 +12,20 @@ from scipy.fft import fft2, ifft2
 
 # Input image path (OHRC .img)
 img_path = "input.img"
+xml_path = "input.xml"
 
-
-full_width = 12000
-full_height = 101074
-dtype = 'uint8'
+tree = ET.parse(xml_path)
+root = tree.getroot()
+ns = {'isda': 'https://isda.issdc.gov.in/pds4/isda/v1'}
 
 # OHRC metadata from XML
-pixel_resolution = 0.24  # meters per pixel
-sun_azimuth_deg = 272.835304
-sun_elevation_deg = 0.509328
+# pixel_resolution = 0.24  # meters per pixel
+# sun_azimuth_deg = 272.835304
+# sun_elevation_deg = 0.509328
+
+sun_elevation_deg = float(root.find('.//isda:sun_elevation', ns).text)
+sun_azimuth_deg = float(root.find('.//isda:sun_azimuth', ns).text)
+pixel_resolution = float(root.find('.//isda:pixel_resolution', ns).text)
 
 # Define a center crop window (you can change this)
 win_size = 2048
@@ -30,18 +35,8 @@ window = Window(col_off, row_off, win_size, win_size)
 
 print(f"🪟 Windowing image: offset=({row_off},{col_off}), size={win_size}x{win_size}")
 
-# ------------------------
-# 1. LOAD IMAGE WINDOW WITH RASTERIO
-# ------------------------
-profile = {
-    'driver': 'ENVI',
-    'dtype': dtype,
-    'count': 1,
-    'width': full_width,
-    'height': full_height
-}
 
-with rasterio.open(img_path, 'r', **profile) as src:
+with rasterio.open(img_path, 'r') as src:
     I = src.read(1, window=window)
 
 # ------------------------
