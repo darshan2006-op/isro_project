@@ -1,6 +1,6 @@
 import rasterio
 
-input_img_file = "C:/Users/darsh/Downloads/ch2_ohr_ncp_20240930T2025441752_d_img_d18/data/calibrated/20240930/input.img"
+input_img_file = "input.img"
 output_tif_file = "output.tiff"
 
 # Open the .img file with Rasterio

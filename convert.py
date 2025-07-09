@@ -3,8 +3,8 @@ import subprocess
 from lxml import etree
 
 # ---- Config ----
-IMG_FILE = "C:/Users/darsh/Downloads/ch2_ohr_ncp_20240930T2025441752_d_img_d18/data/calibrated/20240930/input.img"
-XML_FILE = "C:/Users/darsh/Downloads/ch2_ohr_ncp_20240930T2025441752_d_img_d18/data/calibrated/20240930/input.xml"  # or .html
+IMG_FILE = "C:/Users/darsh/Downloads/ch2_ohr_ncp_20250612T2031048828_d_img_d18/data/calibrated/20250612/ch2_ohr_ncp_20250612T2031048828_d_img_d18.img"
+XML_FILE = "C:/Users/darsh/Downloads/ch2_ohr_ncp_20250612T2031048828_d_img_d18/data/calibrated/20250612/ch2_ohr_ncp_20250612T2031048828_d_img_d18.xml"  # or .html
 TIFF_FILE = "output.tiff"
 
 # ---- Step 1: Parse Metadata from XML ----
